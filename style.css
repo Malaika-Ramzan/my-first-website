@@ -1,0 +1,1046 @@
+
+/* ==================================================
+   MEHFIL CAFE
+   Clean, Modern & Beginner Friendly CSS
+   ================================================== */
+
+
+/* ================= GENERAL SETTINGS ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* Main text color */
+    color: #3b2923;
+
+    /* Main page background */
+    background-color: #f8f1e8;
+
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    /* Soft transparent beige */
+    background-color: rgba(239, 225, 210, 0.90);
+
+    backdrop-filter: blur(5px);
+
+    border-bottom: 1px solid rgba(166, 95, 63, 0.30);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 70px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    color: #e2b15b;
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: #e2b15b;
+}
+
+.logo:hover {
+    transform: scale(1.04);
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+
+    color: #3b2923;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Navbar Hover */
+
+.nav-links a:hover {
+    color: #3b2923;
+
+    background-color: #e2b15b;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= 20% OFFER BADGE ================= */
+
+.offer-badge {
+    position: fixed;
+
+    top: 90px;
+    right: 25px;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background-color: #e2b15b;
+
+    color: #3b2923;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    line-height: 1.1;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.25);
+
+    z-index: 2000;
+
+    animation: offerDisappear 5s forwards;
+}
+
+.offer-badge span {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Offer disappears after 5 seconds */
+
+@keyframes offerDisappear {
+
+    0% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: scale(0.7);
+    }
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    min-height: 90vh;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 22, 17, 0.62),
+            rgba(35, 22, 17, 0.62)
+        ),
+
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 90px 25px 40px;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    max-width: 700px;
+
+    color: #ffffff;
+
+    animation: fadeIn 1.2s ease;
+}
+
+
+/* Small Hero Heading */
+
+.small-heading {
+    color: #e2b15b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Main Hero Heading */
+
+.hero h1 {
+    font-size: 48px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+    color: #e2b15b;
+}
+
+.hero h1 span {
+    color: #e2b15b;
+}
+
+
+/* Hero Paragraph */
+
+.hero-content > p:not(.small-heading) {
+    font-size: 17px;
+
+    font-weight: 400;
+
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: #f8eee6;
+}
+
+
+/* Hero Button */
+
+.hero-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #3b2923;
+
+    background-color: #e2b15b;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    padding: 11px 25px;
+
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: transparent;
+
+    color: #ffffff;
+
+    border: 1px solid #e2b15b;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Hero Animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-heading p,
+.section-label {
+    color: #a65f3f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #3b2923;
+
+    margin-top: 5px;
+}
+
+
+/* ================= MENU SECTION ================= */
+
+.menu-section {
+    padding: 80px 7%;
+
+    background-color: #f8f1e8;
+}
+
+.menu-container {
+    display: flex;
+
+    gap: 22px;
+
+    justify-content: center;
+
+    align-items: stretch;
+}
+
+
+/* ================= FOOD CARDS ================= */
+
+.food-card {
+    width: 25%;
+
+    min-width: 210px;
+
+    background-color: #fffdf9;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    border: 1px solid #eaded2;
+
+    box-shadow:
+        0 5px 18px rgba(60, 35, 20, 0.08);
+
+    transition: 0.35s ease;
+}
+
+
+/* Food Card Hover */
+
+.food-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e2b15b;
+
+    box-shadow:
+        0 14px 30px rgba(60, 35, 20, 0.16);
+}
+
+
+/* Card Image */
+
+.food-card img {
+    width: 100%;
+
+    height: 185px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+
+/* Image Hover */
+
+.food-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Card Content */
+
+.card-content {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #fffdf9;
+}
+
+.card-content h3 {
+    font-size: 21px;
+
+    color: #3b2923;
+
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #75635b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+    padding: 80px 10%;
+
+    background-color: #efe1d2;
+}
+
+.about-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 32px;
+
+    color: #3b2923;
+
+    margin: 8px 0 18px;
+}
+
+.about-text p {
+    color: #625149;
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+
+/* About Button */
+
+.about-button {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    background-color: #a65f3f;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    padding: 10px 23px;
+
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #e2b15b;
+
+    color: #3b2923;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= PRICES SECTION ================= */
+
+.prices-section {
+    padding: 80px 7%;
+
+    background-color: #f8f1e8;
+}
+
+.price-container {
+    display: flex;
+
+    gap: 22px;
+
+    justify-content: center;
+
+    align-items: stretch;
+}
+
+
+/* Price Card */
+
+.price-card {
+    width: 25%;
+
+    min-width: 210px;
+
+    padding: 25px 18px;
+
+    background-color: #fffdf9;
+
+    border: 1px solid #eaded2;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 18px rgba(60, 35, 20, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #e2b15b;
+
+    box-shadow:
+        0 12px 25px rgba(60, 35, 20, 0.14);
+}
+
+
+/* Price Name */
+
+.price-card h3 {
+    color: #3b2923;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Price Description */
+
+.price-card p {
+    color: #75635b;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Price */
+
+.price-card span {
+    color: #a65f3f;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* Price Message */
+
+.price-message {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+
+    color: #625149;
+
+    font-size: 15px;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+    padding: 80px 7%;
+
+    background-color: #efe1d2;
+}
+
+.contact-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 55px;
+
+    align-items: flex-start;
+}
+
+.contact-info,
+.contact-form {
+    width: 50%;
+}
+
+
+/* Contact Heading */
+
+.contact-info h3 {
+    font-size: 25px;
+
+    color: #3b2923;
+
+    margin-bottom: 12px;
+}
+
+
+/* Contact Description */
+
+.contact-info > p {
+    color: #6b5a52;
+
+    font-size: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Contact Items */
+
+.contact-item {
+    margin-bottom: 16px;
+}
+
+.contact-item strong {
+    color: #a65f3f;
+
+    font-size: 15px;
+}
+
+.contact-item p {
+    color: #6b5a52;
+
+    font-size: 14px;
+}
+
+
+/* ================= CONTACT FORM ================= */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: #3b2923;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #d8c8bb;
+
+    border-radius: 8px;
+
+    background-color: #fffdf9;
+
+    color: #3b2923;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* Form Focus */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a65f3f;
+
+    box-shadow:
+        0 0 0 3px rgba(166, 95, 63, 0.10);
+}
+
+
+/* Form Button */
+
+.contact-form button {
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #a65f3f;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e2b15b;
+
+    color: #3b2923;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #241713;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.footer-content h2 {
+    color: #e2b15b;
+
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    color: #d7c8c0;
+
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px !important;
+
+    margin-top: 18px;
+}
+
+.thanks {
+    color: #e2b15b !important;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   ================================================== */
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+
+        padding: 7px 10px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .menu-container {
+        flex-wrap: wrap;
+    }
+
+    .food-card {
+        width: 45%;
+    }
+
+    .price-container {
+        flex-wrap: wrap;
+    }
+
+    .price-card {
+        width: 45%;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    header {
+        background-color: rgba(239, 225, 210, 0.95);
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 12px 0;
+
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 3px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+
+        padding: 6px 9px;
+    }
+
+
+    /* Offer Badge */
+
+    .offer-badge {
+        top: 145px;
+
+        right: 15px;
+
+        width: 65px;
+
+        height: 65px;
+
+        font-size: 15px;
+    }
+
+    .offer-badge span {
+        font-size: 11px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 110px 20px 40px;
+    }
+
+    .small-heading {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+
+        line-height: 1.25;
+    }
+
+    .hero-content > p:not(.small-heading) {
+        font-size: 15px;
+    }
+
+
+    /* Section Headings */
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    /* Sections */
+
+    .menu-section,
+    .about-section,
+    .prices-section,
+    .contact-section {
+        padding: 60px 6%;
+    }
+
+
+    /* Menu */
+
+    .menu-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .food-card {
+        width: 100%;
+
+        max-width: 380px;
+    }
+
+
+    /* About */
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+
+    /* Prices */
+
+    .price-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .price-card {
+        width: 100%;
+
+        max-width: 380px;
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info h3 {
+        font-size: 23px;
+    }
+}
+
